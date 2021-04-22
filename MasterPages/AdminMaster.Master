@@ -1,0 +1,266 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="HRISDashboard.MasterPages.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>HRIS-Dashboard</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <link rel="icon" href="<%=ResolveUrl("~/files/assets/images/favicon.ico")%>" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery/js/jquery.min.js")%>"></script>
+
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/bower_components/bootstrap/css/bootstrap.min.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/icon/themify-icons/themify-icons.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/icon/icofont/css/icofont.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/pages/flag-icon/flag-icon.min.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/pages/menu-search/css/component.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/pages/prism/prism.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/css/style.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/css/jquery.mCustomScrollbar.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/css/pcoded-horizontal.min.css")%>">
+
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css")%>">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/pages/data-table/css/buttons.dataTables.min.css")%>">
+
+    <link rel="stylesheet" href="<%=ResolveUrl("~/files/bower_components/select2/css/select2.min.css")%>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/files/bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css")%>" />
+    <link rel="stylesheet" href="<%=ResolveUrl("~/files/bower_components/multiselect/css/multi-select.css")%>" />
+
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css")%>">
+
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/assets/icon/font-awesome/css/font-awesome.min.css")%>">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="pcoded" class="pcoded">
+                <div class="pcoded-container">
+                    <nav class="navbar header-navbar pcoded-header">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-logo" style="width: 98px;">
+                                <a class="mobile-menu" id="mobile-collapse" href="#!">
+                                    <i class="ti-menu"></i>
+                                </a>
+                                <a href="<%=ResolveUrl("~/index.html")%>">
+                                    <img class="img-fluid" src="../files/assets/images/logo-hader.png" alt="Theme-Logo" style="width: 78px;" />
+                                </a>
+                                <a class="mobile-options">
+                                    <i class="ti-more"></i>
+                                </a>
+                            </div>
+                            <div class="navbar-container container-fluid">
+                                <ul class="nav-left mt-2 ml-0">
+                                    <li class="pl-0">
+                                        <p class="text-whitr">
+                                            <span class="align-self-end h4 font-weight-bold-600 text-white">Human Resource Information System (HRIS) - Dashboard 
+                                            </span>
+                                        </p>
+                                    </li>
+
+                                </ul>
+                                <ul class="nav-right">
+                                    <%--<li class="header-notification">
+                                        <a href="#!">
+                                            <i class="ti-gift"></i>
+                                            <span class="badge bg-c-pink"></span>
+                                        </a>
+                                        <ul class="show-notification">
+                                            <li>
+                                                <h6>Birtday Wish</h6>
+                                                <label class="label label-danger">New</label>
+                                            </li>
+                                            <li>
+                                                <div class="media">
+                                                    <img class="d-flex align-self-center" src="../files/assets/images/user.png"
+                                                        alt="Generic placeholder image">
+                                                    <div class="media-body">
+                                                        <h5 class="notification-user">John Doe</h5>
+                                                        <p class="notification-msg">
+                                                            Lorem ipsum dolor sit amet, consectetuer
+                                                    elit.
+                                                        </p>
+                                                        <span class="notification-time">30 minutes ago</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="media">
+                                                    <img class="d-flex align-self-center" src="../files/assets/images/user.png"
+                                                        alt="Generic placeholder image">
+                                                    <div class="media-body">
+                                                        <h5 class="notification-user">Joseph William</h5>
+                                                        <p class="notification-msg">
+                                                            Lorem ipsum dolor sit amet, consectetuer
+                                                    elit.
+                                                        </p>
+                                                        <span class="notification-time">30 minutes ago</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="media">
+                                                    <img class="d-flex align-self-center" src="../files/assets/images/user.png"
+                                                        alt="Generic placeholder image">
+                                                    <div class="media-body">
+                                                        <h5 class="notification-user">Sara Soudein</h5>
+                                                        <p class="notification-msg">
+                                                            Lorem ipsum dolor sit amet, consectetuer
+                                                    elit.
+                                                        </p>
+                                                        <span class="notification-time">30 minutes ago</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>--%>
+                                    <li class="user-profile header-notification">
+                                        <a href="#!">
+                                            <img src="../files/assets/images/user.png" class="img-radius user-icon"
+                                                alt="User-Profile-Image">
+                                            <span>Admin</span>
+                                            <i class="ti-angle-down"></i>
+                                        </a>
+                                        <ul class="show-notification profile-notification">
+                                            <li>
+                                                <a href="<%=ResolveUrl("~/Secure/frmLogin.aspx")%>">
+                                                    <i class="ti-layout-sidebar-left"></i>Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="pcoded-main-container">
+                        <nav class="pcoded-navbar">
+                            <div class="pcoded-inner-navbar">
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="pcoded-hasmenu">
+                                        <a href="<%=ResolveUrl("~/Admin/Dashboard.aspx")%>">
+                                            <span class="pcoded-micon"><i class="ti-layout-cta-right"></i></span>
+                                            <span class="pcoded-mtext">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)">
+                                            <span class="pcoded-micon"><i class="ti-receipt"></i></span>
+                                            <span class="pcoded-mtext">MIS Reports</span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="<%=ResolveUrl("~/Admin/frmSearch.aspx")%>">
+                                                    <span class="pcoded-micon"><i class="icofont icofont-radio-active"></i></span>
+                                                    <span class="pcoded-mtext">Employee Detail</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="<%=ResolveUrl("~/Report/ServiceDetail.aspx")%>" target="_blank">
+                                                    <span class="pcoded-micon"><i class="icofont icofont-radio-active"></i></span>
+                                                    <span class="pcoded-mtext">Service Detail</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="<%=ResolveUrl("~/Admin/frmAdvanceSearch.aspx")%>">
+                                                    <span class="pcoded-micon"><i class="icofont icofont-radio-active"></i></span>
+                                                    <span class="pcoded-mtext">Advance Query</span>
+                                                </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)">
+                                            <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
+                                            <span class="pcoded-mtext">Utilities</span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="<%=ResolveUrl("~/Admin/frmComingBirthDay.aspx")%>">
+                                                    <span class="pcoded-micon"><i class="ti-gift"></i></span>
+                                                    <span class="pcoded-mtext">Birthday Wishes</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="<%=ResolveUrl("~/Admin/frmImportExcel.aspx")%>">
+                                                    <span class="pcoded-micon"><i class="fa fa-file-excel-o"></i></span>
+                                                    <span class="pcoded-mtext">Import Excel</span>
+                                                </a>
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="pcoded-wrapper">
+                            <div class="pcoded-content">
+                                <div class="pcoded-inner-content">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery/js/jquery.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery-ui/js/jquery-ui.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/popper.js/js/popper.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/bootstrap/js/bootstrap.min.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/modernizr/js/modernizr.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/modernizr/js/css-scrollbars.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/pages/prism/custom-prism.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/i18next/js/i18next.min.js")%>"></script>
+    <script type="text/javascript"
+        src="<%=ResolveUrl("~/files/bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js")%>"></script>
+    <script type="text/javascript"
+        src="<%=ResolveUrl("~/files/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery-i18next/js/jquery-i18next.min.js")%>"></script>
+
+    <script src="<%=ResolveUrl("~/files/assets/js/pcoded.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/assets/js/menu/menu-hori-fixed.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/assets/js/jquery.mCustomScrollbar.concat.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/js/script.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/js/pcoded.min.js")%>"></script>
+
+
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net/js/jquery.dataTables.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js")%>"></script>
+
+    <script src="<%=ResolveUrl("~/files/assets/pages/data-table/js/jszip.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/assets/pages/data-table/js/pdfmake.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/assets/pages/data-table/js/vfs_fonts.js")%>"></script>
+
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net-buttons/js/buttons.print.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net-buttons/js/buttons.html5.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js")%>"></script>
+
+    <script src="<%=ResolveUrl("~/files/bower_components/select2/js/select2.full.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/select2/js/select2.full.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/multiselect/js/jquery.multi-select.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/js/jquery.quicksearch.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/pages/advance-elements/select2-custom.js")%>"></script>
+
+</body>
+</html>

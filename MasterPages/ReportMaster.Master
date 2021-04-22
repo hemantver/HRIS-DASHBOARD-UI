@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ReportMaster.master.cs" Inherits="HRISDashboard.MasterPages.ReportMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="<%=ResolveUrl("~/files/assets/images/favicon.ico")%>" type="image/x-icon">
+    <title>Human Resource Information System (HRIS) - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="<%=ResolveUrl("~/files/assets/css/style.css") %>" rel="stylesheet">
+    <link href="<%=ResolveUrl("~/files/bower_components/bootstrap/css/bootstrap.min.css") %>" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/files/bower_components/sweetalert/css/sweetalert.css") %>">
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="page-wrapper">
+        <form action="" role="form" id="form" method="" runat="server">
+            <!-- start: TOPBAR -->
+            <!-- start: TOPBAR CONTAINER -->
+            <!-- start: LOGO -->
+
+            <!-- start: PAGE -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- start: FOOTER -->
+            <footer class="inner" style="margin-left: 20px; ">
+                <div class="footer-inner">
+                    <div class="text-center">
+                        <h6 style="margin-top: 15px">Copyright © 2019 Directorate of Local Bodies, Government of Uttar Pradesh. </h6>
+                        <h6>Designed & Developed By Marg Software Solutions</h6>
+                    </div>
+
+                </div>
+            </footer>
+        </form>
+        <!-- end: FOOTER -->
+    </div>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery/js/jquery.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery-ui/js/jquery-ui.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/popper.js/js/popper.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/bootstrap/js/bootstrap.min.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/modernizr/js/modernizr.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/modernizr/js/css-scrollbars.js")%>"></script>
+
+
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/js/script.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/bower_components/sweetalert/js/sweetalert.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/js/modal.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveUrl("~/files/assets/js/modalEffects.js")%>"></script>
+
+</body>
+</html>
